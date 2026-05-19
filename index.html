@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anurag Bojja — Resume</title>
+  <meta name="description" content="Resume of Anurag Bojja — DevSecOps Engineer. View online or download the latest PDF." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📄%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #1e293b;
+      --panel: #ffffff;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --border: #334155;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ===== Header ===== */
+    header {
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand h1 {
+      font-size: 22px;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .brand p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background: #334155;
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ===== Main content ===== */
+    main {
+      flex: 1;
+      padding: 32px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .viewer-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      background: var(--panel);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .viewer-toolbar {
+      padding: 12px 18px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #475569;
+    }
+
+    .file-name {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+
+    .file-name svg {
+      width: 18px;
+      height: 18px;
+      color: #ef4444;
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 80vh;
+      border: 0;
+      background: #525659;
+    }
+
+    /* Fallback if PDF can't render in browser (e.g. some mobile browsers) */
+    .fallback {
+      display: none;
+      padding: 60px 32px;
+      text-align: center;
+      color: #475569;
+    }
+
+    .fallback h3 {
+      margin: 0 0 8px;
+      color: #0f172a;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      padding: 20px 32px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 640px) {
+      header { padding: 16px 18px; }
+      main { padding: 16px; }
+      .brand h1 { font-size: 18px; }
+      .btn { padding: 8px 14px; font-size: 13px; }
+      .pdf-frame { height: 70vh; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <div class="brand">
+        <h1>Anurag Bojja</h1>
+        <p>DevSecOps Engineer · Resume</p>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="AnuragBojja-Resume-DevSecOps.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+          Open in new tab
+        </a>
+        <a class="btn btn-primary" href="AnuragBojja-Resume-DevSecOps.pdf" download="AnuragBojja-Resume-DevSecOps.pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="viewer-wrapper">
+        <div class="viewer-toolbar">
+          <div class="file-name">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span>AnuragBojja-Resume-DevSecOps.pdf</span>
+          </div>
+          <span id="last-updated"></span>
+        </div>
+
+        <iframe
+          class="pdf-frame"
+          src="AnuragBojja-Resume-DevSecOps.pdf#toolbar=1&navpanes=0&view=FitH"
+          title="Anurag Bojja Resume"
+          onerror="document.getElementById('fallback').style.display='block';this.style.display='none';"
+        ></iframe>
+
+        <div class="fallback" id="fallback">
+          <h3>Your browser can't display the PDF inline.</h3>
+          <p>Use the <strong>Download Resume</strong> button above to view it.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Always up to date · Built by Anurag Bojja ·
+        <a href="https://github.com/AnuragBojja" target="_blank" rel="noopener">View on GitHub</a>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    // Show "Last updated" timestamp based on the PDF's Last-Modified header from GitHub Pages
+    (async () => {
+      try {
+        const res = await fetch("AnuragBojja-Resume-DevSecOps.pdf", { method: "HEAD" });
+        const lm = res.headers.get("Last-Modified");
+        if (lm) {
+          const d = new Date(lm);
+          const formatted = d.toLocaleDateString(undefined, {
+            year: "numeric", month: "short", day: "numeric"
+          });
+          document.getElementById("last-updated").textContent = "Updated " + formatted;
+        }
+      } catch (e) { /* silent */ }
+    })();
+
+    // Detect mobile browsers that don't render PDF in iframe and show fallback
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      // Many mobile browsers can't inline-render PDFs. Hint to use the buttons.
+      const fb = document.getElementById("fallback");
+      const frame = document.querySelector(".pdf-frame");
+      // Give it a chance — if no content after 2s, show fallback
+      setTimeout(() => {
+        try {
+          if (!frame.contentDocument && !frame.contentWindow) {
+            fb.style.display = "block";
+          }
+        } catch (e) {
+          fb.style.display = "block";
+        }
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
